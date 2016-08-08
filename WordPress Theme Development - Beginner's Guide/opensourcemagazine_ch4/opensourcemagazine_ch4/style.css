@@ -1,0 +1,310 @@
+/*
+Theme Name: Open Source Online Magazine chapter 4
+Theme URI: http://rachelmccollin.co.uk/opensourcemagazine
+Author: Tessa Blakeley Silver / Rachel McCollin
+Author URI: http://rachelmccollin.co.uk/
+Description: Theme to accompany WordPress 3.4 Theme Development Beginners Guide
+Version: 
+Tags: 
+*/
+
+
+/*
+ -----------------------------------------------------
+|NOTE: This style sheet leverages the layout-core.css.|
+ -----------------------------------------------------
+*/
+@import url(css/layout-core.css);
+
+/*------------------TYPEOGRAPHY -------------------*/
+/*
+(some color here, most color is handled at BOTTOM of sheet)
+be sure to add your font stacks and major font colors here
+*/
+
+/*@font-face loads*/
+
+
+
+body{font-family: 'Trebuchet MS', Helvetica, Arial, Verdana, sans-serif; font-size: 0.9em; color: #ccc; background-color: #222;}
+
+h1, h3, h5{font-family: Helvetica, Arial, sans-serif; font-weight: 100; line-height: 120%; color: #666; margin: 20px 0 10px 0;}
+
+h2, h4, h6{font-family: 'Helvetica Neu', Helvetica, 'Arial Condensed', Arial, sans-serif; font-weight: 100; line-height: 110%; color: #999; margin: 20px 0 10px 0;}
+		
+h1 {font-size: 280%;font-weight: 600;}
+		
+h2 {font-size: 240%;}
+		
+h3 {font-size: 180%;}
+
+h4{font-size: 200%; color: #999}
+
+h5{font-size: 115%;}
+
+h6{font-size: 100%;}	
+
+p {line-height: 150%; margin-bottom: 15px;}
+
+blockquote{font-family: Georgia, "Century Schoolbook", Times, "Times New Roman", serif; font-weight: 100;  font-size: 160%;}
+
+blockquote p{line-height: 110%; padding: 10px 5px 5px 10px; margin-bottom: 0;}
+
+cite{display:block; font-family: Georgia, sans-serif; font-style: italic;}
+
+blockquote cite{padding: 0 0 10px 20px; font-size: 50%; font-weight: 100;}
+
+acronym, abbr{color: #666; border-bottom: 1px dotted #999; cursor: help;}
+
+pre, code{font-family: Courier, monospace; font-size: 100%; margin-bottom:10px;}
+pre, code{border-top: 2px dotted #999; border-bottom: 2px dotted #999; padding: 5px 0;}
+
+sup, sub{font-size: 90%;}
+		
+a {font-size: 100%; color: #088fff; font-weight: 100; text-decoration: none;}
+
+a:hover { color: #08cfff; text-decoration: underline;}
+		
+a:visited { }
+
+img{border: none;}
+
+/* Text meant only for screen readers */
+.screen-reader-text{position: absolute;left: -5000em;}
+/*------------------ STANDARD STYLING -------------------*/
+header{height: 110px;background: url(images/osmag-logos.png) no-repeat 0 0; }
+#mainNav{position:absolute; top: 110px; width: 100%;}
+#mainNav li a{display: block; padding: 10px 15px 13px 15px; line-height: 100%; font-size: 120%; border: none; color: #036;}
+#mainNav li a:hover{color:#088fff;}
+#across{margin: 0; width:100%; border-top: 2px solid #444; background: #000}/*for a strechted bottom only*/
+#container{background: url(images/osmag-container-bg.png) no-repeat 50% -30px;}
+#container2{background: url(images/osmag-earth.jpg) no-repeat 50% 0;}
+h2.thisMonth{font-size: 260%; color: #fff;}
+h2.pastIssues{color:#222;}
+
+article h2{background: url(images/pngs/highlight-border.png) repeat-x 0 bottom; padding-bottom: 5px;}
+
+.content{margin-top: 250px;}
+.sidebar{margin-top: 150px;}
+
+.comments-count{display:block; width: 40px; height: 32px; background: url(images/pngs/comments-icon.png) no-repeat 0 0; margin-right: 20px; font-size: 150%;text-align: center;}
+
+.sidebar div{margin-top: 30px; padding-bottom: 10px;}
+.sidebar h2{margin-left:20px;}
+
+/*------------------REUSABLE GRAPHIC TREATMENTS -------------------*/
+/*reusable image backgrounds*/
+.img-quote-light{background: url(images/pngs/r-quotes-light.png) no-repeat -10px -7px; text-indent: 55px;}
+.img-quote-dark{background-image: url(images/pngs/r-quotes-dark.png); background-repeat: no-repeat; background-position: -10px -7px; text-indent: 55px;}
+.img-bottom-shadow{background: url(images/pngs/bot-r-shadow.png) no-repeat 50% bottom;}
+.img-top-shadow{background: url(images/pngs/top-r-shadow.png) no-repeat 50% 0;}
+.img-line-hz{background: url(images/pngs/highlight-border.png) repeat-x left bottom;}
+
+/*main background colorscheme*/
+.bg-main{background-color: #222;}
+.bg-secondary{background-color: #666;}
+.bg-tertiary{background-color: #999;}
+.bg-light1{background-color: #eee;}
+.bg-light2{background-color: #ddd;}
+.bg-dark1{background-color: #000;}
+.bg-dark2{background-color: #444;}
+
+/*gradients*/
+.grd-hz-main{background: -webkit-gradient(linear, top left, top right, from(#333), to(#000));
+background: -webkit-linear-gradient(left, #333, #000);
+background: -moz-linear-gradient(left, #333, #000);
+background: -ms-linear-gradient(left, #333, #000);
+background: -o-linear-gradient(left, #333, #000);
+background: linear-gradient(left, #333, #000);
+-pie-background: linear-gradient(left, #333, #000);
+behavior: url(css/PIE.htc);}
+
+.grd-vt-main{background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#000));
+background: -webkit-linear-gradient(top, #333, #000);
+background: -moz-linear-gradient(top, #333, #000);
+background: -ms-linear-gradient(top, #333, #000);
+background: -o-linear-gradient(top, #333, #000);
+background: linear-gradient(top, #333, #000);
+-pie-background: linear-gradient(top, #333, #000);
+behavior: url(css/PIE.htc);}
+
+.grd-hz-secondary{background: -webkit-gradient(linear, top left, top right, from(#555), to(#222));
+background: -webkit-linear-gradient(left, #555, #222);
+background: -moz-linear-gradient(left, #555, #222);
+background: -ms-linear-gradient(left, #555, #222);
+background: -o-linear-gradient(left, #555, #222);
+background: linear-gradient(left, #555, #222);
+-pie-background: linear-gradient(left, #222, #222);
+behavior: url(css/PIE.htc);}
+
+.grd-vt-secondary{background: -webkit-gradient(linear, left top, left bottom, from(#555), to(#222));
+background: -webkit-linear-gradient(top, #555, #222);
+background: -moz-linear-gradient(top, #555, #222);
+background: -ms-linear-gradient(top, #555, #222);
+background: -o-linear-gradient(top, #555, #222);
+background: linear-gradient(top, #555, #222);
+-pie-background: linear-gradient(top, #555, #222);
+behavior: url(css/PIE.htc);}
+
+.grd-hz-tertiary{background: -webkit-gradient(linear, top left, top right, from(#888), to(#999));
+background: -webkit-linear-gradient(left, #aaa, #999);
+background: -moz-linear-gradient(left, #aaa, #999);
+background: -ms-linear-gradient(left, #aaa, #999);
+background: -o-linear-gradient(left, #aaa, #999);
+background: linear-gradient(left, #aaa, #999);
+-pie-background: linear-gradient(left, #aaa, #999);
+behavior: url(css/PIE.htc);}
+
+.grd-vt-tertiary{background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#999));
+background: -webkit-linear-gradient(top, #ddd, #999);
+background: -moz-linear-gradient(top, #ddd, #999);
+background: -ms-linear-gradient(top, #ddd, #999);
+background: -o-linear-gradient(top, #ddd, #999);
+background: linear-gradient(top, #ddd, #999);
+-pie-background: linear-gradient(top, #ddd, #999);
+behavior: url(css/PIE.htc);}
+
+/*font colors*/
+.clr-main{ color: #666;}
+.clr-secondary{color: #aaa;}
+.clr-tertiary{color: #999;}
+.clr-light1{color: #eee;}
+.clr-light2{color: #ddd;}
+.clr-dark1{color:#000;}
+.clr-dark2{color:#333;}
+
+
+/*borders*/
+.bdr{border: 1px solid;}
+	/*apply thickness*/
+.bdr-2px{border: 2px solid;}
+	/*pick a side*/
+.bdr-top{border-left:none; border-right: none; border-bottom: none;}
+.bdr-left{border-top:none; border-right: none; border-bottom: none;}
+.bdr-right{border-left:none; border-top: none; border-bottom: none;}
+.bdr-bottom{border-left:none; border-right: none; border-top: none;}
+	/*leverage selectors for border colors
+	 -be sure to apply your rules in this order*/
+.bg-main.bdr{border-color: #aaa;}
+.bg-secondary.bdr{border-color: #999;}
+.bg-tertiary.bdr{border-color: #eee;}
+.bg-light1.bdr{border-color: #ddd;}
+.bg-light2.bdr{border-color: #000;}
+.bg-dark1.bdr{border-color: #333;}
+.bg-dark2.bdr{border-color: #666;}	
+
+/*rounded corners*/
+.rnd{-webkit-border-radius: 5px; 
+-moz-border-radius: 5px; 
+border-radius: 5px;}
+	/*only two corners*/
+.rnd-top{-webkit-border-radius: 5px 5px 0 0; 
+-moz-border-radius: 5px 5px 0 0; 
+border-radius: 5px 5px 0 0;
+behavior: url(css/PIE.htc);}
+
+.rnd-left{-webkit-border-radius: 5px 0 0 5px; 
+-moz-border-radius: 5px 0 0 5px; 
+border-radius: 5px 0 0 5px;
+behavior: url(css/PIE.htc);}
+
+.rnd-right{-webkit-border-radius: 0 5px 5px 0; 
+-moz-border-radius: 0 5px 5px 0; 
+border-radius: 0 5px 5px 0;
+behavior: url(css/PIE.htc);}
+
+.rnd-bottom{-webkit-border-radius: 0 0 5px 5px; 
+-moz-border-radius: 0 0 5px 5px; 
+border-radius: 0 0 5px 5px
+behavior: url(css/PIE.htc);}
+
+	/*leverage selectors to get only one corner
+	 --make sure you apply them in this order!*/
+.rnd-left.rnd-top{-webkit-border-radius: 5px 0 0 0; 
+-moz-border-radius: 5px 0 0 0; 
+border-radius: 5px 0 0 0;
+behavior: url(css/PIE.htc);}
+
+.rnd-right.rnd-top{-webkit-border-radius: 0 5px 0 0; 
+-moz-border-radius: 0 5px 0 0; 
+border-radius: 0 5px 0 0;
+behavior: url(css/PIE.htc);}
+
+.rnd-left.rnd-bottom{-webkit-border-radius: 0 0 0 5px; 
+-moz-border-radius: 0 0 0 5px; 
+border-radius: 0 0 0 5px;
+behavior: url(css/PIE.htc);}
+
+.rnd-right.rnd-bottom{-webkit-border-radius: 0 0 5px 0; 
+-moz-border-radius: 0 0 5px 0; 
+border-radius: 0 0 5px 0;
+behavior: url(css/PIE.htc);}
+
+/*box-shadows*/
+.shdw-centered{-moz-box-shadow: 0 0 .15px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  behavior: url(css/PIE.htc);}
+  
+.shdw-offset{-moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+-webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5)
+behavior: url(css/PIE.htc);}
+
+/*sidebar lists*/
+aside li {list-style-type: none;}
+
+
+/*emboseed text - will not render in IE!*/
+.embossed{text-shadow: rgba(0,0,0,0.1) 0 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.2) 0 1px, rgba(0,0,0,0.3) 0 -1px;}
+
+/*------------------MEDIA QUERIES-------------------*/
+
+/*remember, there are also media queries in the layout-core! double check there if you run into conflicts*/
+@media (min-width: 1220px) {
+    /*for very large screens*/
+   #mainNav{position:absolute; top: 110px; width: 1100px;}
+	
+}
+@media (max-width: 1024px) {
+	/*for laptop/netbook/tablet screens*/
+	#mainNav{position:absolute; top: 110px; width: 950px;}
+	
+}
+
+@media (min-width: 480px) and (max-width: 800px) {
+	/*for tablet screens*/
+	header{height: 100px; background-position: 0 -220px;}
+	
+	#mainNav{top:100px; width: 300px;}
+	#mainNav li{float:none;clear:both; background: url(images/pngs/highlight-border.png) repeat-x 0 bottom;}
+    #container2{background-position: 70% -90px;}
+	.home article.post h2{font-size: 150%; margin-bottom: 10px;}
+	.home article.post .entry-content,article.post .entry-meta, article.post a.more{display:none;}
+	.content.left.two-thirds, .sidebar.right.third{float:none; clear:both; margin: 0 auto; width:98%;}
+	.sidebar div{width: 30%; margin: 1.2%; float:left;}
+	
+	.home .content.left.two-thirds{margin-top:180px;}
+	
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	/*phones*/
+	header{height: 70px; background-position: 0 -425px;}
+	#mainNav{top:70px; width: 220px;}
+	#mainNav li{float:none;clear:both;background: url(images/pngs/highlight-border.png) repeat-x 0 bottom;}
+	#mainNav li a{font-size: 100%; padding: 10px}
+	
+	.home article.post h2{font-size: 120%; margin-bottom: 10px; padding-left: 50px;}
+	.home article.post .entry-content,article.post .entry-meta, article.post a.more{display:none;}
+	.home article.post a.comments{position:absolute; margin-top: -55px;}
+	
+	.home .content.left.two-thirds{margin-top:150px;}
+	
+	.soc {text-indent: -5000em;}
+}
+
+
+
+
+
