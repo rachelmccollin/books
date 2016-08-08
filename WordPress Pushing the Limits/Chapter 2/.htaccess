@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+ErrorDocument 503 /503.php
+RewriteEngine on
+RewriteBase /
+RewriteCond %{ENV:REDIRECT_STATUS} !=503
+RewriteCond %{REMOTE_HOST} !^111\.111\.111\.111$
+RewriteCond %{REQUEST_URI} !robots\.txt$ [NC]
+RewriteRule ^ - [L,R=503]
+</IfModule>

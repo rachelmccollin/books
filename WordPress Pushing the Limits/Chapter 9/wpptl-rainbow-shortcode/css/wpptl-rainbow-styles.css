@@ -1,0 +1,13 @@
+/*
+stylesheet to accompany the wpptl-rainbow-shortcode plugin
+adds styling for the shortcode output depending on the parameters specified
+*/
+.rainbow.red {
+ color: #ff0000;
+}
+.rainbow.blue {
+ color: #0000ff;
+}
+.rainbow.green {
+ color: #00ff00;
+}
